@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body
+    {
+        padding: 0;
+        margin: 0;
+        background-color: #0c002b;
+
+    }
+    a
+    {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        padding: 30px 60px;
+        letter-spacing: 2px;
+        text-decoration: none;
+       font-family: sans-serif;
+      text-transform: uppercase;
+      box-shadow: 0 20px 50px rgb(0, 0, 0,.5);
+       font-size: 30px;
+        color: #1670f0;
+        overflow: hidden;
+    }
+    a:after
+    {
+        content: '';
+        position: absolute;
+        top:0px;
+        left: 2px;
+        width: 50%;
+        bottom: 0px;
+        background-color: rgba(255, 255, 255, 0.05);
+        display: block;
+    }
+    a span:nth-child(1)
+    {
+        width: 100%;
+        background:linear-gradient(to left, white,blue);
+        position: absolute;
+        height: 2px;
+        left:0;
+        top:0;
+        animation: animation1 2s linear infinite;
+    }
+    a span:nth-child(2)
+    {
+        width: 2px;
+        background:linear-gradient(to bottom, white,blue);
+        position: absolute;
+        height: 100%;
+        right:0;
+        top:0;
+        animation: animation2 2s linear infinite;
+        animation-delay: 1s;
+       
+    }
+    a span:nth-child(3)
+    {
+        width: 100%;
+        background:linear-gradient(to right, white,blue);
+        position: absolute;
+        height: 2px;
+        right:0;
+        bottom:0;
+        animation: animation3 2s linear infinite;
+       
+    }
+    a span:nth-child(4)
+    {
+        width: 2px;
+        background:linear-gradient(to top, white,blue);
+        position: absolute;
+        height: 100%;
+        left:0;
+        top:0;
+        animation: animation4 2s linear infinite;
+        animation-delay: 1s;
+       
+    }
+    @keyframes animation1
+    {
+        0%
+        {
+              transform: translateX(-100%);
+        }
+        100%
+        {
+            transform: translateX(100%);
+        }
+    }
+    @keyframes animation2
+    {
+        0%
+        {
+              transform: translateY(-100%);
+        }
+        100%
+        {
+            transform: translateY(100%);
+        }
+    }
+    @keyframes animation3
+    {
+        0%
+        {
+              transform: translateX(100%);
+        }
+        100%
+        {
+            transform: translateX(-100%);
+        }
+    }
+    @keyframes animation4
+    {
+        0%
+        {
+              transform: translateY(100%);
+        }
+        100%
+        {
+            transform: translateY(-100%);
+        }
+    }
+    </style>
+</head>
+<body>
+    <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>button
+    </a> 
+</body>
+</html>
