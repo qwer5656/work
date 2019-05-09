@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+<style type="text/css">
+.center
+{
+	
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%,-50%);
+}	
+body
+{
+	padding: 0;
+	margin: 0;
+	height: 100vh;
+	width: 100%;
+	background-color: gray;
+}
+.container
+{
+	position: relative;
+	top:0;
+	left: 0;
+	width: 400px;
+	height: 600px;
+	overflow: hidden;
+}
+.container img
+{
+	filter: grayscale(100%);
+	transition: 1s all;
+
+}
+.container:hover img ,.container:active img
+{
+	filter: grayscale(0%);
+	transform:scale(1.2);
+}
+.container:hover h1 ,.container:active h1
+{
+	transform: perspective(600px) rotateX(0deg);
+}
+.container h1
+{
+  width: 100%;
+  text-align: center;
+  color: black;
+  font-family: sans-serif;
+  background-color: white;
+  position: absolute;
+  bottom:0;
+  left: 0;
+  transform-origin: bottom;
+  transition: 1s all;
+  transform: perspective(600px) rotateX(90deg);
+}
+</style>	
+</head>
+<body>
+	<div class="center">
+		<div class="container">
+			<img src="https://picsum.photos/400/600?random=2">
+			<h1>Neil card</h1>
+		</div>
+	</div>
+</body>
+</html>
